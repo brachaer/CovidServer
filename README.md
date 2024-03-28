@@ -33,7 +33,7 @@ All Client data is securely stored and easily accessible.
 ### 2.	Open terminal from server folder.
 ### 3.	Install server dependencies:
       npm install
-### 4.	Change file env to .env  add the following content:
+### 4.	Create a .env file in the root of the server project with the following content:     
       PORT=8080
       CONN=your-mongodb-connection-string 
 ### 5.	Run server:
