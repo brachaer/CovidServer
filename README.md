@@ -38,7 +38,7 @@ All Client data is securely stored and easily accessible.
       CONN=your-mongodb-connection-string 
 ### 5.	Run server:
       npm start
-### 6.	Follow with [Client Repository](https://github.com/brachaer/CupidAIClient)
+### 6.	Follow with [Client Repository](https://github.com/brachaer/CovidClient)
 <br/>
 
 ### Configuration Note
