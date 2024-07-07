@@ -1,8 +1,4 @@
-const whitelist = [
-  "http://localhost:5173",
-  "https://covidmanager.onrender.com",
-  "https://covidmanager.onrender.com/",
-];
+const whitelist = ["https://covidmanager.onrender.com"];
 const corsOptionsConfig = function (req, callback) {
   let corsOptions;
   if (whitelist.indexOf(req.header("Origin")) !== -1) {
