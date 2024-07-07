@@ -62,15 +62,12 @@ const addVaccine = asyncWrapper(async (req, res, next) => {
   validateClientId(clientId);
 
   const { date, manufacturer } = req.body;
-  const client = await CovidDetails.findOne({ clientId });
-  if (!client) {
+  const covidDetails = await CovidDetails.findOne({ clientId });
+  if (!covidDetails) {
     return next(createCustomError(`client id ${clientId} not found`, 404));
   }
   validateVaccineDates(req.body);
-  let covidDetails = await CovidDetails.findOne({ clientId: clientId });
-  if (!covidDetails) {
-    covidDetails = new CovidDetails({ clientId: clientId });
-  }
+  
   covidDetails.vaccineDates.push({ date, manufacturer });
 
   await covidDetails.save();
